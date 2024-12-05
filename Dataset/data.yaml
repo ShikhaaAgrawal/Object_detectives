@@ -1,0 +1,13 @@
+train: Dataset/train/images
+val: Dataset/valid/images
+test: dataset/test/images
+
+nc: 41
+names: ['Barrier Ahead', 'Cycle Crossing', 'Give Way', 'Horn Prohibited', 'Hospital', 'Left Hair Pin Bend', 'Left hand curve', 'Men at Work', 'No Parking', 'No Stopping', 'No overtaking', 'Parking Lot Cars', 'Parking Lot Cycle', 'Pedestrian Crossing', 'Pedestrian Prohibited', 'Petrol Pump- Gas Station', 'Right Hair Pin Bend', 'Right Hand Curve', 'Right Reverse Bend', 'Road Wideness Ahead', 'School Ahead', 'Speed Limit -10-', 'Speed Limit -100-', 'Speed Limit -120-', 'Speed Limit -20-', 'Speed Limit -30-', 'Speed Limit -35-', 'Speed Limit -50-', 'Speed Limit -60-', 'Speed Limit -70-', 'Speed Limit -80-', 'Speed Limit -90-', 'Speed limit -40-', 'Stop', 'Straight Prohibitor No Entry', 'deer crossing', 'dont turn left', 'lampu hijau', 'lampu merah', 'mengeluarkan isyarat suara -klakson-', 'turn right']
+
+roboflow:
+  workspace: traffic-sign-kqfqm
+  project: traffic_sign-gv5rp-t0k2e-q8meh
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/traffic-sign-kqfqm/traffic_sign-gv5rp-t0k2e-q8meh/dataset/3
