@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traffic Sign Detection</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="static\css\styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -34,17 +34,17 @@
         <h2>Features</h2>
         <div class="feature-grid">
             <div class="feature-item">
-                <img src="icon1.png" alt="Real-time Detection">
+                <img src="static\images\realtime.png" alt="Real-time Detection">
                 <h3>Real-time Detection</h3>
                 <p>Instant recognition and classification of traffic signs.</p>
             </div>
             <div class="feature-item">
-                <img src="icon2.png" alt="High Accuracy">
+                <img src="static\images\accuracy.png" alt="High Accuracy">
                 <h3>High Accuracy</h3>
                 <p>Powered by advanced machine learning models.</p>
             </div>
             <div class="feature-item">
-                <img src="icon3.png" alt="User-Friendly Interface">
+                <img src="static\images\user.png" alt="User-Friendly Interface">
                 <h3>User-Friendly Interface</h3>
                 <p>Intuitive design for ease of use on any device.</p>
             </div>
@@ -54,14 +54,33 @@
     <section id="demo" class="demo">
         <h2>Live Demo</h2>
         <p>Upload an image or capture a photo to detect traffic signs in real-time.</p>
-        <form>
-            <input type="file" accept="image/*">
-            <button>Detect</button>
+    
+        <!-- Image Upload Section -->
+        <form id="image-upload-form">
+            <div class="upload-container">
+                <input type="file" accept="image/*" id="image-upload" onchange="updateFileName()" />
+                <label for="image-upload">Choose Image</label>
+            </div>
+            <div class="file-name" id="file-name">No file chosen</div>
+            <button type="button" onclick="detectFromImage()">Detect from Image</button>
         </form>
+    
+        <!-- Real-time Camera Section -->
+        <div class="real-time">
+            <h3>Real-time Camera Feed</h3>
+            <p>Click the button below to start the camera and detect traffic signs in real-time.</p>
+            <video id="camera-feed" width="100%" height="auto" autoplay></video>
+            <button onclick="startCamera()">Start Camera</button>
+            <button onclick="stopCamera()">Stop Camera</button>
+            <button onclick="detectFromCamera()">Detect in Real-time</button>
+        </div>
     </section>
+    
 
     <footer>
         <p>© 2024 TrafficVision. All Rights Reserved.</p>
     </footer>
+
+    <script src="static/js/script.js"></script>
 </body>
 </html>

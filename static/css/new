@@ -187,7 +187,7 @@ header nav ul li a:hover {
 }
 
 .demo form button {
-    background: #007B7F;
+    background: #ff5757;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -196,7 +196,7 @@ header nav ul li a:hover {
 }
 
 .demo form button:hover {
-    background: #005f5f;
+    background: #ff7070;
 }
 
 
