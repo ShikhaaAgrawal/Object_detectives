@@ -201,12 +201,18 @@ header nav ul li a:hover {
 
 
 /* Real-time Camera Section */
+/* Real-time Camera Section */
 .real-time {
     margin-top: 40px;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;   /* Adjusted padding for better spacing */
     background: #f4f4f4;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Adds consistent gap between elements */
 }
 
 .real-time h3 {
@@ -235,12 +241,82 @@ header nav ul li a:hover {
     cursor: pointer;
     transition: background 0.3s ease;
     margin: 10px;
+    font-size: 1rem;
 }
 
 .real-time button:hover {
     background: #005f5f;
 }
 
+.contact {
+    padding: 50px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.contact-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.contact-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #007B7F;
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact-item a {
+    color: #007B7F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: #005f5f;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 80%; /* Make contact items take more space on smaller screens */
+        margin-bottom: 20px;
+    }
+}
 
 footer {
     background: #333;

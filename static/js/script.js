@@ -2,56 +2,17 @@ const video = document.getElementById('camera-feed');
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
-async function previewImage() {
-    const fileInput = document.getElementById('image-upload');
-    const preview = document.getElementById('image-preview');
-    preview.innerHTML = '';
-
-    if (fileInput.files.length > 0) {
-        const img = document.createElement('img');
-        img.src = URL.createObjectURL(fileInput.files[0]);
-        img.style.maxWidth = '100%';
-        preview.appendChild(img);
-    }
-}
-
-async function detectFromImage() {
-    const fileInput = document.getElementById('image-upload');
-    if (!fileInput.files[0]) {
-        alert('Please select an image!');
-        return;
-    }
-
-    const formData = new FormData();
-    formData.append('image', fileInput.files[0]);
-
-    try {
-        const response = await fetch('/detect-image', {
-            method: 'POST',
-            body: formData,
-        });
-
-        if (response.ok) {
-            const img = new Image();
-            img.src = URL.createObjectURL(await response.blob());
-            img.style.maxWidth = '100%';
-            document.getElementById('image-preview').appendChild(img);
-        } else {
-            alert('Detection failed');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-    }
-}
-
 async function startCamera() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
         video.srcObject = stream;
 
+        // Remove the video element after starting the camera
+        video.style.display = 'none';  // Hides the video feed
+
         const detect = async () => {
             if (video.srcObject) {
-                // Capture frame from video feed
+                // Capture frame from video feed and draw it on the canvas
                 context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
                 // Convert the canvas content to a Blob and send to the server for detection
@@ -77,7 +38,7 @@ async function startCamera() {
                     }
                 }
             }
-            requestAnimationFrame(detect);
+            requestAnimationFrame(detect);  // Continuous frame capture and detection
         };
         detect();
     } catch (error) {
