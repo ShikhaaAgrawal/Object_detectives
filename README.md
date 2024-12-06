@@ -67,7 +67,6 @@ This project implements a road sign detection system using the YOLO (You Only Lo
 - requirements.txt should include:
 
     - makefile
-    - Copy code
     - Flask==2.1.1
     - ultralytics==8.0.37
     - opencv-python==4.5.3.56
@@ -88,9 +87,8 @@ Run the Flask application with the following command:
 - Once the server is running, open a web browser and navigate to:
 
 1. arduino
-2. Copy code
-3. http://localhost:5000
-4. You should now be able to interact with the system.
+2. http://localhost:5000
+3. You should now be able to interact with the system.
 
 4. Usage
 
