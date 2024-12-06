@@ -82,7 +82,6 @@ Start the Flask server:
 Run the Flask application with the following command:
 
     ```bash
-    
     python app.py
     
 - Open the application in your browser:
@@ -121,12 +120,10 @@ Run the Flask application with the following command:
 
 #Contributors
 
-1.
-Shikha Agrawal
+1.Shikha Agrawal
 Email: shikha.agrawal@mca.christuniversity.in
 Christ (Deemed-to-be-University)
 
-2. 
-Muskan Kumari Gupta
+2. Muskan Kumari Gupta
 Email: muskan.kumarigupta@mca.christuniversity.in
 Christ (Deemed-to-be-University)
