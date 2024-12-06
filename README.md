@@ -39,7 +39,7 @@ This project implements a road sign detection system using the YOLO (You Only Lo
 
 ### Prerequisites
 
-- Python 3.x
+- Python 
 - Flask
 - YOLOv5 (Ultralytics)
 - OpenCV
@@ -54,24 +54,26 @@ This project implements a road sign detection system using the YOLO (You Only Lo
    cd repository-name
 
 
-Install the required dependencies:
+2. **Install the required dependencies:**
 
-Create a virtual environment and install the dependencies from requirements.txt:
+- Create a virtual environment and install the dependencies from requirements.txt:
 
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-pip install -r requirements.txt
-requirements.txt should include:
+    ```bash
+    
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    pip install -r requirements.txt
 
-makefile
-Copy code
-Flask==2.1.1
-ultralytics==8.0.37
-opencv-python==4.5.3.56
-numpy==1.21.2
-Download or Train YOLO Model:
+- requirements.txt should include:
+
+    - makefile
+    - Copy code
+    - Flask==2.1.1
+    - ultralytics==8.0.37
+    - opencv-python==4.5.3.56
+    - numpy==1.21.2
+
+3. Download or Train YOLO Model:
 
 You can use a pretrained road sign model or train one yourself.
 Place the YOLO model file (road_sign_model.pt) in the project directory.
@@ -79,43 +81,52 @@ Start the Flask server:
 
 Run the Flask application with the following command:
 
-bash
-Copy code
-python app.py
-Open the application in your browser:
+    ```bash
+    
+    python app.py
+    
+- Open the application in your browser:
 
-Once the server is running, open a web browser and navigate to:
+- Once the server is running, open a web browser and navigate to:
 
-arduino
-Copy code
-http://localhost:5000
-You should now be able to interact with the system.
+1. arduino
+2. Copy code
+3. http://localhost:5000
+4. You should now be able to interact with the system.
 
-Usage
-Image Detection:
+4. Usage
 
-Upload an image through the form on the home page.
-The server will process the image and return the annotated image with road sign detections.
-Real-Time Detection:
+- Image Detection:
 
-For real-time detection, upload video frames or use a webcam to capture and send frames.
-The system will return annotated frames with detected road signs.
-File Structure
-bash
-Copy code
-/project-root
-│
-├── /static           # Static files (CSS, JS, images)
-├── /templates        # HTML templates
-├── /models           # Folder for YOLO model (road_sign_model.pt)
-├── app.py            # Main Flask application
-├── requirements.txt  # Python dependencies
-├── README.md         # Project documentation
-Contributors
+    - Upload an image through the form on the home page.
+    - The server will process the image and return the annotated image with road sign detections.
+
+- Real-Time Detection:
+
+    - For real-time detection, upload video frames or use a webcam to capture and send frames.
+    - The system will return annotated frames with detected road signs.
+
+- File Structure
+  
+   ```bash
+    /project-root
+    │
+    ├── /static           # Static files (CSS, JS, images)
+    ├── /templates        # HTML templates
+    ├── /models           # Folder for YOLO model (road_sign_model.pt)
+    ├── app.py            # Main Flask application
+    ├── requirements.txt  # Python dependencies
+    ├── README.md         # Project documentation
+
+
+#Contributors
+
+1.
 Shikha Agrawal
 Email: shikha.agrawal@mca.christuniversity.in
 Christ (Deemed-to-be-University)
 
+2. 
 Muskan Kumari Gupta
 Email: muskan.kumarigupta@mca.christuniversity.in
 Christ (Deemed-to-be-University)
