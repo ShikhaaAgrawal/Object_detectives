@@ -86,11 +86,11 @@ Run the Flask application with the following command:
 
 - Once the server is running, open a web browser and navigate to:
 
-1. arduino
-2. http://localhost:5000
-3. You should now be able to interact with the system.
+      http://localhost:5000
+   
+4. You should now be able to interact with the system.
 
-4. Usage
+5. Usage
 
 - Image Detection:
 
