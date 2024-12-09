@@ -1,0 +1,5 @@
+makefile
+Flask==2.1.1
+ultralytics==8.0.37
+opencv-python==4.5.3.56
+numpy==1.21.2
